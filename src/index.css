@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'react-toastify/dist/ReactToastify.css';
+
+/* Toast customization */
+.Toastify__toast-container {
+  width: auto;
+  max-width: 400px;
+}
+
+.Toastify__toast {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  color: white;
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #6366F1, #4F46E5);
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth focus transitions */
+input:focus, select:focus, textarea:focus {
+  transition: all 0.2s ease-out;
+}
+
+/* Checkbox animation */
+input[type="checkbox"] {
+  transition: all 0.2s ease-out;
+}
+
+/* Custom checkbox for task completion */
+.task-checkbox {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  position: relative;
+}
+
+.task-checkbox:checked {
+  background: #10B981;
+  border-color: #10B981;
+  animation: bounce-in 0.3s ease-out;
+}
+
+.task-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: -2px;
+  left: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.task-checkbox:hover {
+  border-color: #6366F1;
+  transform: scale(1.05);
+}
